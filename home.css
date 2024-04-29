@@ -1,0 +1,451 @@
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* Estilos básicos para o cabeçalho */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px; /* Espaçamento entre os itens */
+  }
+  
+  /* Estilo dos links do cabeçalho */
+  .navigation-link {
+    color: rgb(23, 23, 23); /* Define a cor do texto para preto */
+    text-decoration: none; /* Remove o sublinhado */
+  }
+  
+  /* Efeito ao passar o mouse */
+  .navigation-link:hover {
+    text-decoration: underline;
+    font-weight: bold; /* Deixa o texto em negrito */
+  }
+  
+  /* Estilo básico dos botões */
+  button {
+    background-color: green; /* Cor de fundo */
+    border: none;
+    color: orange; /* Cor do texto */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px; /* Bordas arredondadas */
+    transition: box-shadow 0.3s ease; /* Suaviza a transição do brilho */
+  }
+  
+  /* Efeito de brilho ao passar o mouse nos botões */
+  button:hover {
+    box-shadow: 0 0 15px yellow; /* Brilho com sombra amarela */
+  }
+  .access-button {
+    display: inline-block;
+    background-color: #FAEBD7;
+    color: #055F0E;
+    padding: 10px 25px;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  /* Reset básico para remover estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilizando o cabeçalho */
+.header-top {
+  display: flex;
+  justify-content: space-between; /* Alinha itens horizontalmente com espaço entre */
+  align-items: center; /* Alinha itens verticalmente no centro */
+  padding: 10px 20px; /* Espaçamento dentro do cabeçalho */
+  background-color: #f4f4f4;
+}
+
+.logo {
+  /* Tamanho do seu logo */
+  width: 100px;
+  height: auto;
+}
+
+.navigation-list {
+  list-style-type: none; /* Remove os marcadores da lista */
+  display: flex; /* Alinha os itens da lista horizontalmente */
+}
+
+.navigation-item {
+  margin: 0 10px; /* Espaçamento entre os itens da lista */
+}
+
+.navigation-link {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: black; /* Cor do texto dos links */
+  font-weight: bold; /* Peso da fonte */
+}
+
+.contato-button {
+  text-decoration: none;
+  background-color: green; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  padding: 15px 25px; /* Espaçamento interno do botão */
+  border-radius: 20px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição suave para o hover */
+}
+
+.contato-button:hover {
+  background-color: darkgreen; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+.intro-section {
+  background-image: url('Images/sua-nova-imagem.jpeg'); /* Atualize com o caminho correto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.intro-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  bottom: 0; /* Alinha na parte inferior da imagem */
+  color: white; /* Cor do texto dentro da sobreposição */
+  width: 100%; /* Ocupa a largura toda da seção */
+  transition: opacity 0.3s; /* Transição suave para efeitos de hover ou interações */
+}
+
+.overlay-content {
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* carrosseis quem somos */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.about-text h2 {
+  color: #055F0E;
+  margin-bottom: 25px;
+}
+
+.about-text h1 {
+  margin-bottom: 15px;}
+
+.about-text .about-paragraph {
+    margin-bottom: 30px;
+}
+.about-text .edicoes-passadas {
+  color: #055F0E;
+}
+
+.about-image {
+  width: 50%; 
+  height: auto;
+  background: url('Images/Imagem1Carrosel.JPG') no-repeat center center;
+  background-size: cover;
+}
+
+.about-carousel {
+  max-width: 50%;
+}
+
+.carousel {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.carousel-cell {
+  width: 100%; /* Largura das células */
+  margin-right: 10px; /* Espaçamento entre as células */
+  background: #8C8; /* Cor de fundo */
+  border-radius: 5px; /* Borda arredondada */
+  counter-reset: none; /* Reseta o contador */
+}
+
+.carousel-cell img {
+  width: 50%; /* Tamanho da imagem */
+  display: block; /* Centraliza a imagem */
+  border-radius: 5px; /* Borda arredondada */
+}
+/* nossa missao */
+.mission-section {
+  text-align: center; /* Centraliza o texto */
+}
+
+.cor-verde {
+  color: #055F0E;
+}
+
+.mission-columns {
+  display: flex;
+  justify-content: space-around; /* Espaçamento entre as colunas */
+  align-items: start; /* Alinha os itens ao topo */
+}
+
+.mission-column {
+  width: 30%; /* Define a largura de cada coluna como 1/3 do contêiner pai */
+  padding: 10px; /* Adiciona um pouco de espaço dentro de cada coluna */
+  box-sizing: border-box; /* Garante que o padding não adicione largura adicional */
+}
+
+.mission-column img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner .mission-column */
+  height: auto; /* Garante que a altura da imagem se ajuste para manter a proporção */
+  object-fit: cover; /* Faz a imagem cobrir o espaço disponível, podendo cortar um pouco se necessário */
+  display: block; /* Remove espaços extras abaixo da imagem */
+}
+
+.mission-column h3 {
+  margin-top: 10px; /* Espaço entre a imagem e o título da coluna */
+}
+
+.mission-column p {
+  margin-top: 5px; /* Espaço entre o título da coluna e o texto */
+}
+
+/* Verde depois de Nossa missao */
+
+.mission-stats {
+  background-color: #055F0E; /* ou qualquer código de cor verde que você preferir */
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 0; /* Aumenta o padding para fazer a barra mais alta */
+  /* ou você pode usar height se preferir uma altura específica */
+  /* height: 150px; */
+}
+
+.stat h3 {
+  margin: 0;
+  font-size: 2.5em; /* Ajuste o tamanho da fonte se necessário */
+}
+
+.stat p {
+  margin: 5px 0 0;
+  font-size: 1.2em; /* Ajuste o tamanho da fonte se necessário */
+}
+
+/* Contador */
+
+.countdown-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha os itens ao topo */
+  gap: 20px; /* Espaço entre o texto e o contador */
+}
+
+.countdown-text {
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+.countdown-text h3 {
+  text-align: left; /* Isso vai alinhar o texto à esquerda */
+}
+
+.countdown-timer {
+  display: flex;
+  flex-direction: row; /* Isso garante que os itens se alinhem horizontalmente */
+  justify-content: center; /* Isso centraliza os itens na horizontal */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+.additional-text {
+  margin-top: 1px; /* Espaço entre o contador e o texto adicional */
+}
+
+.time-box {
+  border-radius: 5px; /* Borda arredondada */
+  padding: 10px;
+  width: 100px; /* Largura dos blocos de tempo */
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Sombra para dar profundidade */
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.time-number {
+  font-size: 2em;
+  display: block;
+}
+
+.time-label {
+  font-size: 1em;
+  color: #333333; /* Cor do texto dos rótulos */
+}
+
+.access-button {
+  display: inline-block;
+  background-color: #4caf50; /* Cor de fundo do botão */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none; /* Remove o sublinhado do link */
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Animação suave de cor de fundo */
+}
+
+.access-button:hover {
+  background-color: #367c2b; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.align-text{
+  margin-top: 100px;
+}
+
+.date-announcement {
+  text-align: left;
+  margin: 1Opx 0;
+}
+
+.countdown-wrapper {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+/* galeria de fotos */
+
+/* .photo-grid-section {
+  background-color: #f5f5f5; /* ou a cor que você deseja para o fundo 
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas 
+  grid-auto-rows: minmax(150px, auto); /* Altura das linhas 
+}
+
+.photo-grid img, .green-box {
+  width: 100%;
+  grid-column: span 1; /* Cada imagem e quadrado verde ocupa 1 coluna 
+}
+
+.green-box {
+  background-color: #008000; /* A cor verde
+}
+
+.text-container {
+  grid-column: 2; /* O texto ocupa a segunda coluna da grade
+  text-align: center; /* Centraliza o texto 
+  padding: 10px; /* Espaço interno para o texto 
+}
+*/
+
+/* Nossos Parceiros */
+
+.partners-section {
+  padding: 20px;
+}
+
+.partners-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partners-logos {
+  display: flex;
+  align-items: center;
+  /* Espaçamento entre os logos, se necessário */
+  gap: 20px;
+}
+
+.partner img {
+  max-width: 100px; /* Ou o tamanho de sua preferência */
+  height: auto;
+}
+
+/* Rodapé */
+
+.site-footer {
+  padding: 20px;
+  text-align: left;
+  background: #f4f4f4;
+}
+
+.footer-logo-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  width: 5%;
+  margin-left: 30px;
+}
+
+.footer-credits {
+  text-align: right;
+  margin-bottom: 100px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
+
+.footer-nav {
+  position: absolute;
+  top: 10px; /* Ajuste conforme necessário */
+  right: 10px; /* Ajuste conforme necessário */
+  display: flex; /* Isso garantirá que os links fiquem um ao lado do outro */
+}
+
+.footer-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333333; /* Cor do texto dos links */
+}
+
+.footer-logo {
+  width: 15%;
+  display: flex;
+  justify-content: space-between; /* Alinha itens horizontalmente com espaço entre */
+  align-items: center; /* Alinha itens verticalmente no centro */
+  padding: 10px 20px; /* Espaçamento dentro do cabeçalho */
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.footer-nav-item {
+  margin-left: 20px; /* Ou o espaçamento que você achar melhor */
+}
+
+.footer-nav-link {
+  text-decoration: none;
+  /* Adicione qualquer outro estilo que desejar para os links */
+}
