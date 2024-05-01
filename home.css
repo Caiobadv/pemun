@@ -3,8 +3,7 @@ img {
     height: auto;
   }
 
-/* Estilos básicos para o cabeçalho */
-nav ul {
+  nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -29,7 +28,7 @@ nav ul {
   
   /* Estilo básico dos botões */
   button {
-    background-color: green; /* Cor de fundo */
+    background-color: #055F0E; /* Cor de fundo */
     border: none;
     color: orange; /* Cor do texto */
     padding: 15px 32px;
@@ -42,11 +41,17 @@ nav ul {
     border-radius: 50px; /* Bordas arredondadas */
     transition: box-shadow 0.3s ease; /* Suaviza a transição do brilho */
   }
+
+  .button.contato-button {
+    background-color: #055F0E; /* Um verde vivo, ajuste o código de cor conforme desejar */
+    color: white; /* Ajusta a cor do texto para branco para melhor contraste */
+}
   
   /* Efeito de brilho ao passar o mouse nos botões */
   button:hover {
-    box-shadow: 0 0 15px yellow; /* Brilho com sombra amarela */
+    box-shadow: 0 0 15px yellow;
   }
+  
   .access-button {
     display: inline-block;
     background-color: #FAEBD7;
@@ -60,6 +65,11 @@ nav ul {
     transition: background-color 0.3s, box-shadow 0.3s;
   }
 
+  .content-below-image .access-button {
+    background-color: #FAEBD7; /* Cor rosa pálido */
+    color: #333; /* Cor do texto, se necessário */
+}
+
   /* Reset básico para remover estilos padrão */
 * {
   margin: 0;
@@ -70,71 +80,93 @@ nav ul {
 /* Estilizando o cabeçalho */
 .header-top {
   display: flex;
-  justify-content: space-between; /* Alinha itens horizontalmente com espaço entre */
-  align-items: center; /* Alinha itens verticalmente no centro */
-  padding: 10px 20px; /* Espaçamento dentro do cabeçalho */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   background-color: #f4f4f4;
 }
 
 .logo {
-  /* Tamanho do seu logo */
   width: 100px;
   height: auto;
 }
 
 .navigation-list {
-  list-style-type: none; /* Remove os marcadores da lista */
-  display: flex; /* Alinha os itens da lista horizontalmente */
+  list-style-type: none;
+  display: flex;
 }
 
 .navigation-item {
-  margin: 0 10px; /* Espaçamento entre os itens da lista */
+  margin: 0 10px;
 }
 
 .navigation-link {
-  text-decoration: none; /* Remove o sublinhado dos links */
-  color: black; /* Cor do texto dos links */
-  font-weight: bold; /* Peso da fonte */
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .contato-button {
   text-decoration: none;
-  background-color: green; /* Cor de fundo do botão */
-  color: white; /* Cor do texto */
-  padding: 15px 25px; /* Espaçamento interno do botão */
-  border-radius: 20px; /* Bordas arredondadas */
-  transition: background-color 0.3s; /* Transição suave para o hover */
+  background-color: #055F0E;
+  color: #055F0E; 
+  padding: 15px 25px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
 }
 
 .contato-button:hover {
-  background-color: darkgreen; /* Cor de fundo do botão ao passar o mouse */
+  background-color: #055F0E;
 }
-
+ 
 
 .intro-section {
-  background-image: url('Images/sua-nova-imagem.jpeg'); /* Atualize com o caminho correto */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.intro-image {
-  width: 100%;
-  height: auto;
-  display: block;
+  position: relative;
+  text-align: center; /* Center the text */
 }
 
 .overlay {
-  bottom: 0; /* Alinha na parte inferior da imagem */
-  color: white; /* Cor do texto dentro da sobreposição */
-  width: 100%; /* Ocupa a largura toda da seção */
-  transition: opacity 0.3s; /* Transição suave para efeitos de hover ou interações */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%; /* This will set the overlay height to cover only 50% of the image from the bottom */
+  bottom: 0; /* Align the overlay to the bottom of the container */
+  background: #055F0E; /* Adjust the color and opacity to match your green overlay */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-end; /* Align the content to the bottom */
+  padding-bottom: 100px; /* Adjust this value to move the content higher up from the bottom */
+}
+  
+.content-below-image {
+  position: absolute; /* This positions the content absolutely within its parent */
+  bottom: -100px; /* Negative value to move the content up */
+  left: 0; /* Aligns the content to the left of the parent */
+  right: 0; /* Aligns the content to the right of the parent */
+  color: white; /* Change the text color as needed */
+  text-align: center; /* Centers the text horizontally */
+  padding: 20px 0; /* Adds padding inside the green area */
+  margin-top: 50px; /* Adjust this value to move the content down */
+
 }
 
 .overlay-content {
-  padding: 20px; /* Espaçamento interno */
-  text-align: center; /* Centraliza o texto */
+  color: white; /* Adjust text color as needed */
+  z-index: 10;
+  /* Add additional styling as needed */
+}
+
+/* Style for the button */
+.button {
+  background-color: #ffffff; /* Button background color */
+  color: #000000; /* Text color */
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  /* Add more styling as needed */
 }
 
 /* carrosseis quem somos */
@@ -179,7 +211,6 @@ nav ul {
 .carousel-cell {
   width: 100%; /* Largura das células */
   margin-right: 10px; /* Espaçamento entre as células */
-  background: #8C8; /* Cor de fundo */
   border-radius: 5px; /* Borda arredondada */
   counter-reset: none; /* Reseta o contador */
 }
@@ -225,17 +256,13 @@ nav ul {
   margin-top: 5px; /* Espaço entre o título da coluna e o texto */
 }
 
-/* Verde depois de Nossa missao */
-
 .mission-stats {
   background-color: #055F0E; /* ou qualquer código de cor verde que você preferir */
   color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 80px 0; /* Aumenta o padding para fazer a barra mais alta */
-  /* ou você pode usar height se preferir uma altura específica */
-  /* height: 150px; */
+  padding: 80px 0;
 }
 
 .stat h3 {
@@ -303,7 +330,7 @@ nav ul {
 
 .access-button {
   display: inline-block;
-  background-color: #4caf50; /* Cor de fundo do botão */
+  background-color: #055F0E; /* Cor de fundo do botão */
   color: white;
   padding: 10px 20px;
   border-radius: 20px;
@@ -329,36 +356,6 @@ nav ul {
   margin-top: 20px; /* Adjust the value as needed */
 }
 
-/* galeria de fotos */
-
-/* .photo-grid-section {
-  background-color: #f5f5f5; /* ou a cor que você deseja para o fundo 
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas 
-  grid-auto-rows: minmax(150px, auto); /* Altura das linhas 
-}
-
-.photo-grid img, .green-box {
-  width: 100%;
-  grid-column: span 1; /* Cada imagem e quadrado verde ocupa 1 coluna 
-}
-
-.green-box {
-  background-color: #008000; /* A cor verde
-}
-
-.text-container {
-  grid-column: 2; /* O texto ocupa a segunda coluna da grade
-  text-align: center; /* Centraliza o texto 
-  padding: 10px; /* Espaço interno para o texto 
-}
-*/
-
-/* Nossos Parceiros */
-
 .partners-section {
   padding: 20px;
 }
@@ -372,8 +369,12 @@ nav ul {
 .partners-logos {
   display: flex;
   align-items: center;
-  /* Espaçamento entre os logos, se necessário */
   gap: 20px;
+}
+
+.partners-logos a {
+  display: inline-block;
+  margin: 20px;  /* Ajusta a margem ao redor de cada logo */
 }
 
 .partner img {
@@ -383,11 +384,25 @@ nav ul {
 
 /* Rodapé */
 
+
 .site-footer {
-  padding: 20px;
+  padding: 10px 20px;
+  margin: 0 auto;
   text-align: left;
   background: #f4f4f4;
 }
+
+
+.footer-content, .footer-logo-socials, .footer-credits {
+  padding: 5px 10px;  /* Ajusta o padding desses elementos se necessário */
+  margin: 0;  /* Remove margens extras */
+}
+
+.footer-logo-socials .social-icon img {
+  width: 50px; /* ou o tamanho que desejar */
+  height: auto; /* mantém a proporção da imagem */
+}
+
 
 .footer-logo-socials {
   display: flex;
@@ -399,13 +414,17 @@ nav ul {
   display: flex;
   gap: 10px;
   margin-top: 10px;
-  width: 5%;
+  margin-bottom: 0;
+  width: 150px;
+  height: auto;
   margin-left: 30px;
 }
 
 .footer-credits {
   text-align: right;
-  margin-bottom: 100px;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 10px;   
 }
 
 .footer-content {
@@ -448,4 +467,14 @@ nav ul {
 .footer-nav-link {
   text-decoration: none;
   /* Adicione qualquer outro estilo que desejar para os links */
+}
+
+
+/* Se você quiser limitar a imagem a uma largura específica, como 500px, use algo assim: */
+.imagem-destacada img {
+  width: 90%; /* Adapta a imagem para a largura do container */
+  max-width: 500px; /* ou qualquer outra largura máxima que desejar */
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

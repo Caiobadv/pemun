@@ -23,7 +23,7 @@ nav ul {
   
   /* Estilo básico dos botões */
   button {
-    background-color: green; /* Cor de fundo */
+    background-color: #055F0E; /* Cor de fundo */
     border: none;
     color: orange; /* Cor do texto */
     padding: 15px 32px;
@@ -92,7 +92,7 @@ nav ul {
 
 .contato-button {
   text-decoration: none;
-  background-color: green;
+  background-color: #055F0E;
   color: white; 
   padding: 15px 25px;
   border-radius: 20px;
@@ -100,7 +100,7 @@ nav ul {
 }
 
 .contato-button:hover {
-  background-color: darkgreen;
+  background-color: #055F0E;
 }
 
 
@@ -116,11 +116,6 @@ nav ul {
 
 /* info evento */
 
-body {
-    background-image: url('Images/Group2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
   
   .event-info {
     text-align: center;
@@ -157,26 +152,42 @@ body {
     font-size: 1em;
   }
 
-    /* localizacao */
-/* Supondo que '.event-info' seja a seção com a imagem de fundo verde e bege */
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .event-info {
     position: relative; /* Define a seção de fundo como um contêiner relativo */
   }
   
   .localizacao {
-    position: absolute;
-    bottom: -40px; /* Aumente este valor para mover a seção para cima */
-    left: 50%;
-    transform: translateX(-50%);
-    background: none;
-    padding: 0;
-  }
-  
-  .localizacao .container {
-    display: block; /* Mude de flex para block se necessário */
-    align-items: center;
-    justify-content: center;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;  /* Centraliza horizontalmente */
+    height: 150px; /* Ajuste conforme a altura desejada */
+    background-color: #fff; /* Garante que o fundo seja branco */
+    position: relative; /* Garanta que a posição relativa seja mantida */
+    top: -10px; /* Ajuste este valor para mover a caixa para cima se necessário */
+}
+
+.localizacao .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Garante que o container ocupe toda a largura */
+}
   
   .localizacao .endereco {
     display: flex;
@@ -220,13 +231,17 @@ body {
   }
   
   .endereco {
-    margin-bottom: 20px; /* Adiciona espaço abaixo do endereço */
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Ajuste conforme necessário para mover para baixo */
+    width: 100%; /* Garante que o texto ocupe a largura total do container */
+}
 
     /* COMITES */
 
     .comites {
-        background-color: #f0f0f0; /* Cor de fundo para a seção dos comitês */
+        background-color: #ffffff; /* Cor de fundo para a seção dos comitês */
         padding: 40px 0;
         text-align: center;
       }
@@ -237,19 +252,33 @@ body {
       }
       
       .comites-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Cria uma grade responsiva com colunas de tamanho mínimo de 150px e máximo do que estiver disponível */
-        gap: 20px; /* Espaço entre os comitês */
-        max-width: 1200px; /* Largura máxima do container da grade */
-        margin: 0 auto; /* Centraliza a grade */
-      }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Isso ajudará a manter o espaçamento uniforme */
+        margin: 0 auto; /* Centraliza a grid no meio da página */
+        max-width: 1200px; /* Ajuste a largura máxima conforme necessário */
+    }
+    
       
-      .comite-item {
-        background-color: white; /* Cor de fundo para os itens individuais dos comitês */
-        padding: 20px;
-        border-radius: 10px; /* Cantos arredondados para os cartões dos comitês */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve para os cartões */
-      }
+    .comite-item {
+      width: 30%; /* Aproximadamente 1/3 da largura para cada card para caber 3 por linha */
+      margin-bottom: 20px; /* Espaço entre as linhas */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Opcional: adiciona sombra para melhor estética */
+      padding: 15px; /* Espaço interno para não ficar muito apertado */
+      background: #fff; /* Fundo branco para os cards */
+      border-radius: 10px; /* Bordas arredondadas para os cards */
+  }
+  @media (max-width: 800px) {
+    .comite-item {
+        width: 45%; /* Em telas menores, você pode querer mostrar apenas 2 por linha */
+    }
+}
+
+@media (max-width: 500px) {
+    .comite-item {
+        width: 90%; /* Em telas muito pequenas, cada card pode ocupar quase toda a linha */
+    }
+}
       
       .comite-item img {
         width: 100px; /* Ajuste para o tamanho dos logotipos */
@@ -268,71 +297,98 @@ body {
   
     
     /* Rodapé */
-    
-    .site-footer {
-      padding: 20px;
-      text-align: left;
-      background: #f4f4f4;
-    }
-    
-    .footer-logo-socials {
-      display: flex;
-      flex-direction: column;
-      align-items: left;
-    }
-    
-    .social-icons {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-      width: 5%;
-      margin-left: 30px;
-    }
-    
-    .footer-credits {
-      text-align: right;
-      margin-bottom: 100px;
-    }
-    
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: right;
-    }
-    
-    .footer-nav {
-      position: absolute;
-      top: 10px; /* Ajuste conforme necessário */
-      right: 10px; /* Ajuste conforme necessário */
-      display: flex; /* Isso garantirá que os links fiquem um ao lado do outro */
-    }
-    
-    .footer-nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333333; /* Cor do texto dos links */
-    }
-    
-    .footer-logo {
-      width: 15%;
-      display: flex;
-      justify-content: space-between; /* Alinha itens horizontalmente com espaço entre */
-      align-items: center; /* Alinha itens verticalmente no centro */
-      padding: 10px 20px; /* Espaçamento dentro do cabeçalho */
-    }
-    
-    .footer-nav-list {
-      list-style: none;
-      display: flex;
-      padding: 0;
-    }
-    
-    .footer-nav-item {
-      margin-left: 20px; /* Ou o espaçamento que você achar melhor */
-    }
-    
-    .footer-nav-link {
-      text-decoration: none;
-      /* Adicione qualquer outro estilo que desejar para os links */
-    }
-    
+
+
+.site-footer {
+  padding: 10px 20px;
+  margin: 0 auto;
+  text-align: left;
+  background: #f4f4f4;
+}
+
+
+.footer-content, .footer-logo-socials, .footer-credits {
+  padding: 5px 10px;  /* Ajusta o padding desses elementos se necessário */
+  margin: 0;  /* Remove margens extras */
+}
+
+.footer-logo-socials .social-icon img {
+  width: 50px; /* ou o tamanho que desejar */
+  height: auto; /* mantém a proporção da imagem */
+}
+
+
+.footer-logo-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  width: 150px;
+  height: auto;
+  margin-left: 30px;
+}
+
+.footer-credits {
+  text-align: right;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 10px;   
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
+
+.footer-nav {
+  position: absolute;
+  top: 10px; /* Ajuste conforme necessário */
+  right: 10px; /* Ajuste conforme necessário */
+  display: flex; /* Isso garantirá que os links fiquem um ao lado do outro */
+}
+
+.footer-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333333; /* Cor do texto dos links */
+}
+
+.footer-logo {
+  width: 15%;
+  display: flex;
+  justify-content: space-between; /* Alinha itens horizontalmente com espaço entre */
+  align-items: center; /* Alinha itens verticalmente no centro */
+  padding: 10px 20px; /* Espaçamento dentro do cabeçalho */
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.footer-nav-item {
+  margin-left: 20px; /* Ou o espaçamento que você achar melhor */
+}
+
+.footer-nav-link {
+  text-decoration: none;
+  /* Adicione qualquer outro estilo que desejar para os links */
+}
+
+
+/* Se você quiser limitar a imagem a uma largura específica, como 500px, use algo assim: */
+.imagem-destacada img {
+  width: 90%; /* Adapta a imagem para a largura do container */
+  max-width: 500px; /* ou qualquer outra largura máxima que desejar */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
