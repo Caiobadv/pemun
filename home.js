@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
         el: '.swiper-pagination',
         clickable: true,
       },
-      // Adicione outras opções conforme necessário
     });
 });
 

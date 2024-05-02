@@ -21,6 +21,10 @@ nav ul {
     font-weight: bold; /* Deixa o texto em negrito */
   }
   
+  .cor-verde {
+    color: #055F0E;
+  }
+  
   /* Estilo básico dos botões */
   button {
     background-color: #055F0E; /* Cor de fundo */
