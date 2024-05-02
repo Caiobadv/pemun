@@ -1,3 +1,8 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -37,10 +42,16 @@ button {
   transition: box-shadow 0.3s ease; /* Suaviza a transição do brilho */
 }
 
+.button.contato-button {
+  background-color: #055F0E; /* Um verde vivo, ajuste o código de cor conforme desejar */
+  color: white; /* Ajusta a cor do texto para branco para melhor contraste */
+}
+
 /* Efeito de brilho ao passar o mouse nos botões */
 button:hover {
   box-shadow: 0 0 15px yellow;
 }
+
 .access-button {
   display: inline-block;
   background-color: #FAEBD7;
@@ -52,6 +63,11 @@ button:hover {
   border-radius: 25px;
   text-decoration: none;
   transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.content-below-image .access-button {
+  background-color: #FAEBD7; /* Cor rosa pálido */
+  color: #333; /* Cor do texto, se necessário */
 }
 
 /* Reset básico para remover estilos padrão */
@@ -93,7 +109,7 @@ font-weight: bold;
 .contato-button {
 text-decoration: none;
 background-color: #055F0E;
-color: white; 
+color: #055F0E; 
 padding: 15px 25px;
 border-radius: 20px;
 transition: background-color 0.3s;
@@ -106,14 +122,18 @@ background-color: #055F0E;
 
 .intro-section {
 position: relative;
+text-align: center; /* Center the text */
 }
 
 .intro-image {
-width: 100%;
-height: auto;
-display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+.cor-verde {
+  color: #055F0E;
+}
 .comite-section {
   padding: 20px;
 }
@@ -132,6 +152,7 @@ display: block;
 }
 
 .comite-buttons {
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 
@@ -155,6 +176,7 @@ display: block;
 .comite-directoria h2 {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .representaciones-list {
