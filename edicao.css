@@ -1,115 +1,127 @@
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    display: inline;
-    margin-right: 20px; /* Espaçamento entre os itens */
-  }
-  
-  /* Estilo dos links do cabeçalho */
-  .navigation-link {
-    color: rgb(23, 23, 23); /* Define a cor do texto para preto */
-    text-decoration: none; /* Remove o sublinhado */
-  }
-  
-  /* Efeito ao passar o mouse */
-  .navigation-link:hover {
-    text-decoration: underline;
-    font-weight: bold; /* Deixa o texto em negrito */
-  }
-  
-  .cor-verde {
-    color: #055F0E;
-  }
-  
-  /* Estilo básico dos botões */
-  button {
-    background-color: #055F0E; /* Cor de fundo */
-    border: none;
-    color: orange; /* Cor do texto */
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 50px; /* Bordas arredondadas */
-    transition: box-shadow 0.3s ease; /* Suaviza a transição do brilho */
-  }
-  
-  /* Efeito de brilho ao passar o mouse nos botões */
-  button:hover {
-    box-shadow: 0 0 15px yellow;
-  }
-  .access-button {
-    display: inline-block;
-    background-color: #FAEBD7;
-    color: #055F0E;
-    padding: 10px 25px;
-    font-size: 20px;
-    text-align: center;
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-  /* Reset básico para remover estilos padrão */
-* {
+nav ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos links do cabeçalho */
+.navigation-link {
+  color: rgb(23, 23, 23); /* Define a cor do texto para preto */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Efeito ao passar o mouse */
+.navigation-link:hover {
+  text-decoration: underline;
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Estilo básico dos botões */
+button {
+  background-color: #055F0E; /* Cor de fundo */
+  border: none;
+  color: orange; /* Cor do texto */
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50px; /* Bordas arredondadas */
+  transition: box-shadow 0.3s ease; /* Suaviza a transição do brilho */
+}
+
+.button.contato-button {
+  background-color: #055F0E; /* Um verde vivo, ajuste o código de cor conforme desejar */
+  color: white; /* Ajusta a cor do texto para branco para melhor contraste */
+}
+
+button:hover {
+  box-shadow: 0 0 15px yellow;
+}
+
+.access-button {
+  display: inline-block;
+  background-color: #FAEBD7;
+  color: #055F0E;
+  padding: 10px 25px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.content-below-image .access-button {
+  background-color: #FAEBD7; /* Cor rosa pálido */
+  color: #333; /* Cor do texto, se necessário */
+}
+
+/* Reset básico para remover estilos padrão */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 /* Estilizando o cabeçalho */
 .header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f4f4f4;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+background-color: #f4f4f4;
 }
 
 .logo {
-  width: 100px;
-  height: auto;
+width: 100px;
+height: auto;
 }
 
 .navigation-list {
-  list-style-type: none;
-  display: flex;
+list-style-type: none;
+display: flex;
 }
 
 .navigation-item {
-  margin: 0 10px;
+margin: 0 10px;
 }
 
 .navigation-link {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+text-decoration: none;
+color: black;
+font-weight: bold;
 }
 
 .contato-button {
-  text-decoration: none;
-  background-color: #055F0E;
-  color: white; 
-  padding: 15px 25px;
-  border-radius: 20px;
-  transition: background-color 0.3s;
+text-decoration: none;
+background-color: #055F0E;
+color: #055F0E; 
+padding: 15px 25px;
+border-radius: 20px;
+transition: background-color 0.3s;
 }
 
 .contato-button:hover {
-  background-color: #055F0E;
+background-color: #055F0E;
 }
 
 
 .intro-section {
-  position: relative;
+position: relative;
+text-align: center; /* Center the text */
 }
 
 .intro-image {
@@ -241,6 +253,23 @@ nav ul {
     margin-top: 20px; /* Ajuste conforme necessário para mover para baixo */
     width: 100%; /* Garante que o texto ocupe a largura total do container */
 }
+
+.signup-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #055F0E; /* Cor de fundo verde */
+  color: white; /* Texto branco */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #055F0E; /* Cor mais escura no hover */
+}
+
 
     /* COMITES */
 

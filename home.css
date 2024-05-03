@@ -47,7 +47,6 @@ img {
     color: white; /* Ajusta a cor do texto para branco para melhor contraste */
 }
   
-  /* Efeito de brilho ao passar o mouse nos botões */
   button:hover {
     box-shadow: 0 0 15px yellow;
   }
@@ -56,7 +55,7 @@ img {
     display: inline-block;
     background-color: #FAEBD7;
     color: #055F0E;
-    padding: 10px 25px;
+    padding: 15px 32px;
     font-size: 20px;
     text-align: center;
     border: none;
@@ -110,8 +109,9 @@ img {
   text-decoration: none;
   background-color: #055F0E;
   color: #055F0E; 
-  padding: 15px 25px;
-  border-radius: 20px;
+  padding: 20px 40px;
+  font-size: 18px; /* Aumenta o tamanho da fonte */
+  border-radius: 15px;
   transition: background-color 0.3s;
 }
 
