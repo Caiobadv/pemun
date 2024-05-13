@@ -20,18 +20,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v5 # Atualizado para suportar Node.js 20
-        with:
-          node-version: '20.x' # Definindo a versão do Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: '20.x'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
