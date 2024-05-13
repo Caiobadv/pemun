@@ -1,19 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.carousel', {
-      // Opções do Swiper
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-});
-
 document.addEventListener('DOMContentLoaded', function() {
   const countdownTimer = document.getElementById('countdown-timer');
   const endDate = new Date('July 3, 2024 00:00:00').getTime();
