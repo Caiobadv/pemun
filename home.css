@@ -1,52 +1,128 @@
+/* Reset básico para remover estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navigation-link {
+  color: rgb(23, 23, 23);
+  text-decoration: none;
+}
+
+.navigation-link:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+button {
+  background-color: #055F0E;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 15px yellow;
+}
+
+.access-button {
+  display: inline-block;
+  background-color: #FAEBD7;
+  color: #055F0E;
+  padding: 15px 32px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
 @media (max-width: 600px) {
   .header-top {
-    flex-direction: column; /* Stack logo and navigation vertically */
-    align-items: center; /* Centraliza elementos */
+    flex-direction: column;
+    align-items: center;
   }
 
   .navigation-list {
-    width: 100%; /* Full width for easier navigation */
-    padding: 0; /* Remove padding */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .navigation-item {
-    display: block; /* Stack nav items */
-    text-align: center; /* Center-align nav items */
-    margin: 5px 0; /* Add space between items */
+    margin: 5px 0;
   }
 
   .contato-button {
-    font-size: 14px; /* Reduce font size */
-    padding: 10px 20px; /* Adjust padding */
-    margin-top: 10px; /* Add space above the button */
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-top: 10px;
   }
 
   .intro-section, .content-below-image {
-    padding: 10px; /* Add padding around sections */
+    padding: 10px;
   }
 
   .intro-image, .logo {
-    width: 100%; /* Full width for images */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
   }
 
   h2, h1 {
-    font-size: 18px; /* Smaller headings in smaller screens */
+    font-size: 18px;
   }
 
   .about-text, .mission-section, .partners-section {
-    padding: 15px; /* More padding in sections */
+    padding: 15px;
   }
 }
 
-/* Para telas de tablets */
 @media (min-width: 601px) and (max-width: 1024px) {
+  .navigation-item {
+    padding: 10px;
+  }
+
+  .header-top {
+    padding: 20px;
+  }
+
+  .about-text, .mission-section, .partners-section {
+    padding: 20px;
+  }
+
   .navigation {
     flex-direction: row;
   }
@@ -56,7 +132,6 @@ body {
   }
 }
 
-/* Para telas de desktop */
 @media (min-width: 1025px) {
   .navigation {
     flex-direction: row;
@@ -74,35 +149,6 @@ body {
     justify-content: space-around;
   }
 }
-
-img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    display: inline;
-    margin-right: 20px; /* Espaçamento entre os itens */
-  }
-  
-  /* Estilo dos links do cabeçalho */
-  .navigation-link {
-    color: rgb(23, 23, 23); /* Define a cor do texto para preto */
-    text-decoration: none; /* Remove o sublinhado */
-  }
-  
-  /* Efeito ao passar o mouse */
-  .navigation-link:hover {
-    text-decoration: underline;
-    font-weight: bold; /* Deixa o texto em negrito */
-  }
-  
   /* Estilo básico dos botões */
   button {
     background-color: #055F0E; /* Cor de fundo */
