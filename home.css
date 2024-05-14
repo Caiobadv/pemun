@@ -1,3 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation-list {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-section, .mission-section, .partners-section {
+    padding: 20px;
+  }
+}
+
+/* Para telas de tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .navigation {
+    flex-direction: row;
+  }
+
+  .content-below-image, .about-text {
+    padding: 15px;
+  }
+}
+
+/* Para telas de desktop */
+@media (min-width: 1025px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partners-logos {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 img {
     max-width: 100%;
     height: auto;
