@@ -1,24 +1,47 @@
 body {
   font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 @media (max-width: 600px) {
-  .navigation {
-    flex-direction: column;
+  .header-top {
+    flex-direction: column; /* Stack logo and navigation vertically */
+    align-items: center; /* Centraliza elementos */
   }
 
   .navigation-list {
-    width: 100%;
-    text-align: center;
+    width: 100%; /* Full width for easier navigation */
+    padding: 0; /* Remove padding */
   }
 
-  .header-top {
-    display: flex;
-    flex-direction: column;
+  .navigation-item {
+    display: block; /* Stack nav items */
+    text-align: center; /* Center-align nav items */
+    margin: 5px 0; /* Add space between items */
   }
 
-  .about-section, .mission-section, .partners-section {
-    padding: 20px;
+  .contato-button {
+    font-size: 14px; /* Reduce font size */
+    padding: 10px 20px; /* Adjust padding */
+    margin-top: 10px; /* Add space above the button */
+  }
+
+  .intro-section, .content-below-image {
+    padding: 10px; /* Add padding around sections */
+  }
+
+  .intro-image, .logo {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  h2, h1 {
+    font-size: 18px; /* Smaller headings in smaller screens */
+  }
+
+  .about-text, .mission-section, .partners-section {
+    padding: 15px; /* More padding in sections */
   }
 }
 
